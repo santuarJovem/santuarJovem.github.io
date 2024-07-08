@@ -1,0 +1,54 @@
+const menuHeader = document.querySelector(".menuHeader");
+const menuHeaderFundo = document.querySelector(".menuHeaderFundo");
+const barrasExibir = document.querySelector(".barrasExibir");
+const fecharMenu = document.querySelector(".fecharMenu");
+
+function exibeMenuHeader() {
+    document.body.classList.add('no-scroll');
+    menuHeader.style.display = 'block';
+    menuHeaderFundo.style.display = 'block';
+    barrasExibir.style.display = 'none';
+    fecharMenu.style.display = 'block';
+    menuHeader.classList.add('exibeMenuHeader');
+    menuHeader.classList.remove('escondeMenuHeader');
+}
+
+function escondeMenuHeader() {
+    document.body.classList.remove('no-scroll');
+    menuHeader.classList.remove('exibeMenuHeader');
+    menuHeader.classList.add('escondeMenuHeader');
+    setTimeout(() => {
+        menuHeader.style.display = 'none';
+    }, 950);
+    setTimeout(() => {
+        menuHeaderFundo.style.display = 'none';
+    }, 700);
+    barrasExibir.style.display = 'block';
+    fecharMenu.style.display = 'none';
+}
+
+menuHeaderFundo.addEventListener("click", escondeMenuHeader);
+
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll('.scroll');
+    const delayIncrement = 2;
+
+    items.forEach((item, index) => {
+        const delay = index * delayIncrement;
+        item.style.animationDelay = `${delay}s`;
+
+        item.addEventListener("click", () => {
+            item.style.transform = 'scale(3) translateY(-10px)';
+            item.style.zIndex = '1000';
+        });
+
+        item.addEventListener("mouseout", () => {
+            item.style.transform = 'scale(1) translateY(0px)';
+            item.style.zIndex = '1';
+        });
+    });
+});
+
+// window.onbeforeunload = function () {
+//     window.scrollTo(0, 0);
+// }
