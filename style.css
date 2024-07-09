@@ -357,6 +357,7 @@ main {
 }
 
 .divInf {
+    padding: 0 12px;
     padding-top: 105px;
     background-color: #e6e6e6;
     height: 100%;
@@ -366,10 +367,12 @@ main {
 .divInf h2 {
     color: #000;
     margin-bottom: 13px;
+    font-size: 1.7rem;
 }
 
 .divInf h5 {
     color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem;
 }
 
 footer {
@@ -424,11 +427,17 @@ footer {
 }
 
 a {
-    color: #000000;
+    color: rgb(0, 21, 143);
+    text-decoration: none;
 }
 
 a:hover {
-    color: #5C5C5C;
+    text-decoration: underline;
+}
+
+
+i:not(.ri-arrow-left-s-line, .ri-arrow-right-s-line) {
+    color: black;
 }
 
 .mapa {
