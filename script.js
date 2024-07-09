@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         item.addEventListener("click", () => {
             item.style.transform = 'scale(3) translateY(-10px)';
-            item.style.zIndex = '1000';
+            item.style.zIndex = '10000';
         });
 
         item.addEventListener("mouseout", () => {
@@ -48,7 +48,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-// window.onbeforeunload = function () {
-//     window.scrollTo(0, 0);
-// }
