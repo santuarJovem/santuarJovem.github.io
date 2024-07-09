@@ -15,8 +15,6 @@ body {
     align-items: flex-start;
     justify-content: space-around;
     background-color: #1f1f1f;
-    /* overflow-x: hidden; */
-    width: 100vw;
 }
 
 header {
